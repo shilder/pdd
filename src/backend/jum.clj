@@ -2,8 +2,6 @@
   (:require [aleph.http :as http]
             [ds.logging :as log]
             [rum.server-render]
-            [backend.pages :as pages]
-            [backend.mystem :as mystem]
             [ring.middleware.params]
             [ring.middleware.keyword-params]
             [compojure.core :refer :all]
@@ -12,10 +10,12 @@
             [cheshire.core :as json]
             [clojure.pprint :as pprint]
             [clojure.tools.nrepl.server :as nrepl]
-            [rum.core :as rum]))
+            [rum.core :as rum]
+
+            [backend.pages :as pages]
+            [backend.mystem :as mystem]))
 
 ; java.ural.Meetup live coding demo
-
 (defonce clients (atom {}))
 (defonce bans (atom #{}))
 
@@ -26,7 +26,8 @@
 (defn websocket-handler [request]
   (let [id (get-in request [:params :session])
         login (get-in request [:params :login])
-        ip (get-in request [:headers "x-real-ip"])]
+        ip (or (get-in request [:headers "x-real-ip"])
+               (get request :remote-addr))]
 
     (cond
       (contains? @bans ip)
@@ -46,12 +47,13 @@
           ;; handshake succeeded
           (d/chain'
             (fn [stream]
-              (let [client {:id      id
-                            :login   login
-                            :request request
-                            :stream  stream}]
+              (let [client {:id     id
+                            :login  login
+                            :ip     ip
+                            :ua     (get-in request [:headers "user-agent"])
+                            :stream stream}]
 
-                (log/info "Connected client" id login)
+                (log/info "Connected client" id login ip)
 
                 (s/on-closed stream
                              (fn []
@@ -73,10 +75,9 @@
 ;; TODO: отправлять список пользователей клиенту
 ;; TODO: перенаправлять сообщения полученные от пользователей в общий чат
 (defn handle-message [client message]
-  (log/info "Message from" (:id client) (:login client) message))
-
-(defn dump-clients []
-  (map #(select-keys % [:id :login]) (vals @clients)))
+  (log/debug "Message from"
+             (:id client) (:login client)
+             (:type message) (escape-html (:text message))))
 
 (defroutes app
   (GET "/" []
@@ -153,15 +154,15 @@
 
 
 (defn disconnect-client! [id]
-  (when-let [socket (get-in @clients [id :stream])]
-    (s/close! socket)))
+  (when-let [stream (get-in @clients [id :stream])]
+    (s/close! stream)))
 
 (defn ban! [id]
   (when-let [client (get @clients id)]
-    (let [ip (get-in client [:request :headers "x-real-ip"])
-          socket (get client :stream)]
+    (let [ip (:ip client)
+          stream (:stream client)]
       ; disconnect client
-      (s/close! socket)
+      (s/close! stream)
       ; add ip to ban set
       (swap! bans conj ip))))
 

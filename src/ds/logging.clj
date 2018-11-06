@@ -76,3 +76,10 @@
     (WriterOutputStream.
       ^Writer *out*
       (.newDecoder (Charset/forName "UTF-8")))))
+
+(defn set-pattern! [pattern]
+  (let [encoder (.getEncoder (.getAppender ^Logger (LoggerFactory/getLogger "ROOT") "STDOUT"))
+        old (.getPattern encoder)]
+    (.setPattern encoder pattern)
+    (.start encoder)
+    old))
