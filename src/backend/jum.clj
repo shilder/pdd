@@ -175,6 +175,6 @@
     (mystem/filter-obscene ms text)))
 
 (defonce nrepl
-         (let [s (nrepl/start-server :port 40761)]
+         (let [s (nrepl/start-server :port 40760)]
            (log/info "Started nREPL server on port 40760")
            s))
