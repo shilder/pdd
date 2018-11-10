@@ -12,7 +12,27 @@ https://t.me/clojure_ru
 Clojure Ekaterinburg на meetup.com
 https://www.meetup.com/ru-RU/Clojure-Ekaterinburg/
 
+## Ссылки из презентации ##
+
+* [Ссылка на презентацию](https://docs.google.com/presentation/d/1ZqAVoInJlXpefpHCVMYtyA5b9b9sQSPkgoTZTrpFgXU/edit?usp=sharing)
+* https://thenewstack.io/the-new-stack-makers-adrian-cockcroft-on-sun-netflix-clojure-go-docker-and-more/
+* https://blog.cognitect.com/blog/2015/6/30/walmart-runs-clojure-at-scale
+* [Clojure in Netflix (HN Discussion)](https://news.ycombinator.com/item?id=18345243)
+* https://jobs.apple.com/en-us/details/114424334/senior-clojure-software-engineer
+* [Teaching Clojure at IBM - Steve Shogren](https://www.youtube.com/watch?v=BsLiPt90HDo)
+* https://thoughtworks.github.io/p2/issue09/two-months-early/
+* https://puppetlabs.com/blog/introducing-puppetdb-put-your-data-to-work
+* [Realtime Collaboration with Clojure - Leonardo Borges](https://www.youtube.com/watch?v=3QR8meTrh5g)
+* https://clojure.org/community/success_stories
+* https://www.reddit.com/r/Clojure/comments/68r4lz/one_of_facebook_projects_migrating_from_clojure/
+* [Comment from discussion on HN about Amazon abandoning Clojure projects](https://news.ycombinator.com/item?id=18346154)
+* [Techempower Round 17 JSON serialization benchmark](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=json)
+* https://github.com/shilder/jum
+* https://t.me/clojure_ru
+
 ## Где узнать больше про Clojure ? ##
+
+Официальный сайт: https://clojure.org
 
 ### Обзоры Clojure ###
 
@@ -40,6 +60,33 @@ simple от easy и способы построения этих самых simp
 
 [The Language of the System - Rich Hickey](https://www.youtube.com/watch?v=ROor6_NGIWU)
 Доклад про особенности построения систем (2013 год)
+
+### Метапрограммирование в Lisp и Clojure ###
+
+Хорошая статья по поводу того, зачем в лиспе все эти скобки:
+[The Nature of Lisp](http://www.defmacro.org/ramblings/lisp.html)
+
+Видео от Timothy Baldridge по поводу макросов в Clojure
+[Clojure: Deep Walking Macros](https://www.youtube.com/watch?v=HXfDK1OYpco)
+
+### Persistent Data Structures ###
+
+Видео от Rich Hickey с объяснением встроенных структур данных
+[Clojure Data Structures Part 1 - Rich Hickey](https://www.youtube.com/watch?v=ketJlzX-254)
+
+Статья, на основании которой были реализованы структуры данных для Clojure (и для Scala):
+[Ideal Hash Trees](http://lampwww.epfl.ch/papers/idealhashtrees.pdf)\
+
+Цикл статей с подробным объяснением структуры Persistent Vector в Clojure:
+
+* [Part 1](http://www.hypirion.com/musings/understanding-persistent-vector-pt-1)
+* [Part 2](http://www.hypirion.com/musings/understanding-persistent-vector-pt-2)
+* [Part 3](http://www.hypirion.com/musings/understanding-persistent-vector-pt-3)
+* [Transients](http://www.hypirion.com/musings/understanding-clojure-transients)
+* [Performance benchmarks](http://www.hypirion.com/musings/persistent-vector-performance-summarised)
+
+Альтернативная реализация Persistent Data Structures для Java
+[Bifurcan](https://github.com/lacuna/bifurcan)
 
 ### Различные ссылки ###
 
