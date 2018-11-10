@@ -75,7 +75,7 @@ simple от easy и способы построения этих самых simp
 [Clojure Data Structures Part 1 - Rich Hickey](https://www.youtube.com/watch?v=ketJlzX-254)
 
 Статья, на основании которой были реализованы структуры данных для Clojure (и для Scala):
-[Ideal Hash Trees](http://lampwww.epfl.ch/papers/idealhashtrees.pdf)\
+[Ideal Hash Trees](http://lampwww.epfl.ch/papers/idealhashtrees.pdf)
 
 Цикл статей с подробным объяснением структуры Persistent Vector в Clojure:
 
