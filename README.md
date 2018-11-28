@@ -36,6 +36,14 @@ https://www.meetup.com/ru-RU/Clojure-Ekaterinburg/
 
 Официальный сайт: https://clojure.org
 
+### Вообще про Lisp ###
+
+Хорошая статья по поводу того, зачем в лиспе все эти скобки:
+[The Nature of Lisp](http://www.defmacro.org/ramblings/lisp.html)
+
+Своего рода классическая статья от Paul Graham про Lisp, про скобки и прочее
+[Beating the averages](http://www.paulgraham.com/avg.html)
+
 ### Обзоры Clojure ###
 
 Эти видео довольно старые, но тем не менее они нисколько не потеряли актуальности
@@ -64,9 +72,6 @@ simple от easy и способы построения этих самых simp
 Доклад про особенности построения систем (2013 год)
 
 ### Метапрограммирование в Lisp и Clojure ###
-
-Хорошая статья по поводу того, зачем в лиспе все эти скобки:
-[The Nature of Lisp](http://www.defmacro.org/ramblings/lisp.html)
 
 Видео от Timothy Baldridge по поводу макросов в Clojure
 [Clojure: Deep Walking Macros](https://www.youtube.com/watch?v=HXfDK1OYpco)
