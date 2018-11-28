@@ -3,24 +3,27 @@
 ;; подсказки если вдруг забуду
 
 (comment
+  {:type :text
+   :from (escape-html from)
+   :text (escape-html text)}
+
   (defn text-message [from text]
     {:type :text
      :from (escape-html from)
      :text (escape-html text)})
 
-  (defn send-message! [id message]
-    (when-let [socket (get-in @clients [id :stream])]
+  (defn send-message! [client message]
+    (when-let [socket (:stream client)]
       (s/put! socket (json/generate-string message))))
 
   (defn broadcast-message! [message]
     (doseq [c (vals @clients)]
-      (s/put! (:stream c)
-              (json/generate-string message))))
+      (send-message! c message)))
 
   (rum/defc users-list [clients]
             [:ul
              (for [[k v] clients]
-               [:li (escape-html (:login v))])])
+               [:li (:login v)])])
 
   (defn broadcast-clients! [clients]
     (let [s (rum/render-static-markup (users-list clients))]

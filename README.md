@@ -27,6 +27,8 @@ https://www.meetup.com/ru-RU/Clojure-Ekaterinburg/
 * https://www.reddit.com/r/Clojure/comments/68r4lz/one_of_facebook_projects_migrating_from_clojure/
 * [Comment from discussion on HN about Amazon abandoning Clojure projects](https://news.ycombinator.com/item?id=18346154)
 * [Techempower Round 17 JSON serialization benchmark](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=json)
+* https://snyk.io/blog/jvm-ecosystem-report-2018
+* https://redmonk.com/sogrady/2018/08/10/language-rankings-6-18/
 * https://github.com/shilder/jum
 * https://t.me/clojure_ru
 
@@ -68,6 +70,14 @@ simple от easy и способы построения этих самых simp
 
 Видео от Timothy Baldridge по поводу макросов в Clojure
 [Clojure: Deep Walking Macros](https://www.youtube.com/watch?v=HXfDK1OYpco)
+
+### Протоколы и мультиметоды ###
+
+Неплохая статья где рассказывается про то, какую проблему решают протоколы и мультиметоды
+[Solving the Expression Problem with Clojure 1.2](https://www.ibm.com/developerworks/library/j-clojure-protocols)
+
+Статья, в которой объясняются отличия протоколов, мультиметодов, switch и if/else с точки зрения производительности
+[Polymorphic performance](http://insideclojure.org/2015/04/27/poly-perf/)
 
 ### Persistent Data Structures ###
 
