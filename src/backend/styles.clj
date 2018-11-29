@@ -21,6 +21,9 @@
 (def secondary-color "#f8f9fa")
 (def secondary-color-dark (color/darken secondary-color 10))
 
+(def background-color "#012239")
+(def font-color "#eeffff")
+
 (def btn-base
   {:display         :flex
    :justify-content :center
@@ -54,28 +57,30 @@
 
          ;; customizations
          [:body
-          {:font-family font-family
-           :font-size   "16px"
-           :height      "100%"
-           :width       "100%"}]
+          {:font-family      font-family
+           :font-size        "16px"
+           :height           "100%"
+           :width            "100%"
+           :background-color background-color
+           :color            font-color}]
 
          [:input
-          {:display       :block
-           :width         "100%"
-           :height        "calc(2.25em + 2px)"
-           :padding       ".375em .75em"
-           :font-size     "1rem"
-           :line-height   1.5
-           :border        "1px solid #ced4da"
-           :border-radius ".25em"
-           :transition    "border-color .15s ease-in-out, box-shadow .15s ease-in-out"}
+          {:display          :block
+           :width            "100%"
+           :height           "calc(2.25em + 2px)"
+           :padding          ".375em .75em"
+           :font-size        "1rem"
+           :line-height      1.5
+           :background-color (color/lighten background-color 15)
+           :color            font-color
+           :border           "1px solid #ced4da"
+           :border-radius    ".25em"
+           :transition       "border-color .15s ease-in-out, box-shadow .15s ease-in-out"}
 
           [:&:focus
-           {:color            "#495057"
-            :background-color "#fff"
-            :border-color     "#80bdff"
-            :outline          0
-            :box-shadow       "0 0 0 0.2rem rgba (0, 123, 255, 0.25)"}]]
+           {:border-color "#80bdff"
+            :outline      0
+            :box-shadow   "0 0 0 0.2rem rgba (0, 123, 255, 0.25)"}]]
 
          [:button.btn-primary
           (merge btn-base

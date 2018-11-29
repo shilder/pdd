@@ -111,7 +111,6 @@
       {:type                    "text/javascript"
        :dangerouslySetInnerHTML {:__html (slurp (io/resource "client.js"))}}]
 
-
      [:div.chat-container
       [:span "Hello, " [:strong login]]
 

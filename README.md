@@ -38,11 +38,11 @@ https://www.meetup.com/ru-RU/Clojure-Ekaterinburg/
 
 ### Вообще про Lisp ###
 
-Хорошая статья по поводу того, зачем в лиспе все эти скобки:
 [The Nature of Lisp](http://www.defmacro.org/ramblings/lisp.html)
+Хорошая статья по поводу того, зачем в лиспе все эти скобки:
 
-Своего рода классическая статья от Paul Graham про Lisp, про скобки и прочее
 [Beating the averages](http://www.paulgraham.com/avg.html)
+Своего рода классическая статья от Paul Graham про Lisp, про скобки и прочее
 
 ### Обзоры Clojure ###
 
@@ -73,16 +73,16 @@ simple от easy и способы построения этих самых simp
 
 ### Метапрограммирование в Lisp и Clojure ###
 
-Видео от Timothy Baldridge по поводу макросов в Clojure
 [Clojure: Deep Walking Macros](https://www.youtube.com/watch?v=HXfDK1OYpco)
+Видео от Timothy Baldridge по поводу макросов в Clojure
 
 ### Протоколы и мультиметоды ###
 
-Неплохая статья где рассказывается про то, какую проблему решают протоколы и мультиметоды
 [Solving the Expression Problem with Clojure 1.2](https://www.ibm.com/developerworks/library/j-clojure-protocols)
+Неплохая статья где рассказывается про то, какую проблему решают протоколы и мультиметоды
 
-Статья, в которой объясняются отличия протоколов, мультиметодов, switch и if/else с точки зрения производительности
 [Polymorphic performance](http://insideclojure.org/2015/04/27/poly-perf/)
+Статья, в которой объясняются отличия протоколов, мультиметодов, switch и if/else с точки зрения производительности
 
 ### Persistent Data Structures ###
 
@@ -110,3 +110,6 @@ simple от easy и способы построения этих самых simp
 
 [Thinking in Data](https://www.infoq.com/presentations/Thinking-in-Data)
 Доклад по поводу разработки с использованием данных
+
+[REPL driven development: immediate feedback for you backend code](https://danlebrero.com/2018/11/26/repl-driven-development-immediate-feedback-for-you-backend/)
+Доклад про разработку с использованием REPL
