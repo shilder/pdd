@@ -61,6 +61,12 @@ https://www.meetup.com/ru-RU/Clojure-Ekaterinburg/
 Рекомендуются к просмотру чтобы понять идеи и архитектуру языка. Опять таки, видео
 уже старые, но все идеи которые в них озвучены актуальны и сейчас
 
+[Are We There Yet](https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey)
+Объясняются идеи, на которых построена Clojure, как подходы применяемые в
+этом языке отличаются от традиционного ООП. Также обсуждается подход
+к "управлению временем", отличие value от identity, задачи и особенности реализации
+Persistent Data Structures (2009 год)
+
 [Simple made easy](https://www.infoq.com/presentations/Simple-Made-Easy)
 Классика Rich Hickey. Объясняются идеи стоящие за Simple, отличия
 simple от easy и способы построения этих самых simple систем (2011 год).
