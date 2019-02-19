@@ -119,3 +119,19 @@ simple от easy и способы построения этих самых simp
 
 [REPL driven development: immediate feedback for you backend code](https://danlebrero.com/2018/11/26/repl-driven-development-immediate-feedback-for-you-backend/)
 Доклад про разработку с использованием REPL
+
+### Ссылки на проекты (системы), написанные на Clojure ###
+
+* https://github.com/uxbox
+* https://github.com/someteam/acha
+* https://github.com/bevuta/pepa
+* https://github.com/lupapiste/lupapiste
+* https://github.com/tonsky/grumpy
+
+### Ссылки на библиотеки, написанные в хорошем стиле (по моему мнению) ###
+
+* https://github.com/funcool/clojure.jdbc
+* https://github.com/funcool/buddy-core
+* https://github.com/funcool/buddy-sign
+* https://github.com/clojure/clojure/blob/master/src/clj/clojure/java/io.clj
+
